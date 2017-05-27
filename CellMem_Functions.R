@@ -760,7 +760,7 @@ dyMaxHistogram<-function(mydata, low = 0, up = 0, c = 2, set_x_marker = 0,  same
             
             mysummary <- data.frame(summary(myfdata[myfdata$f_on_samp==i,"dymax"]))
             mysummary_split <- data.matrix(do.call('rbind', strsplit(as.character(mysummary[,3]),':',fixed=TRUE)))
-            category_vector <- c("Minimum:","1st Quantile:","Median:","Mean:","3rd Qunatile:","Maximum:")
+            category_vector <- c("Minimum:","1st Quantile:","Median:","Mean:","3rd Quantile:","Maximum:")
             mysummaryf<- cbind(category_vector,mysummary_split[,2])
             colnames(mysummaryf)[1] <- c("Summary")
             
